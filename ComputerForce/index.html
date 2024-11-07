@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Computer Force | Home</title>
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="path/to/style.css">
+    <link rel="stylesheet" href="template.css">
+    <link rel="stylesheet" href="hamburgerMenu.css">
+    <link rel="stylesheet" href="iconBagMenu.css">
+    <link rel="stylesheet" href="content.css">
+    
+</head>
+<body>
+
+<div class="container">
+    <!-- Header -->
+    <header>
+        <!-- Mobile Menu -->
+        <div class="mobileMenuContainer">
+            <input type="checkbox" id="mobileMenuToggle" class="toggler">
+            <label for="mobileMenuToggle" class="mobileButtonStyle hamburger perfectCenter" aria-label="Toggle mobile menu">
+                <div></div>
+            </label>
+            
+            <div class="modal mobileMenu"></div>
+        </div>
+
+        <!-- Logo -->
+        <div class="left-section">
+            <a href="index.html">
+                <img id="logo" src="images/logo.png" alt="Computer Force Logo">
+            </a>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="search-container">
+            <form>
+                <label for="search">Search:</label>
+                <input type="text" id="search" placeholder="Search" name="search">
+                <button type="submit" aria-label="Search">
+                    <i class="fa fa-search"></i>
+                </button>
+            </form>
+        </div>
+
+        <!-- Menu items -->
+        <div class="right-section">
+            <ul>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+        <div class="searchDesktopContainer">
+            <form>
+                <label for="searchDesktop">Search:</label>
+                <input type="text" id="searchDesktop" placeholder="Search..." name="search">
+                <button type="submit" aria-label="Search">
+                    <i class="fa fa-search"></i>
+                </button>
+            </form>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <section>
+            <h1 class="pageTitle centerText">Welcome to Computer Force</h1>
+            <p class="centerText">Computer Force is your online expert in all things computing</p>
+            
+            <div class="categoryCardContainer">
+                <!-- Category Card: Computers -->
+                <div class="categoryCard">
+                    <div class="categoryImage">
+                        <a href="products.html">
+                            <img src="images/productCategories/computers.jpg" alt="Computers">
+                        </a>
+                    </div>
+                    <div class="categoryTitle perfectCenter">
+                        <h2 style="color: #000;">Computers</h2> <!-- Aumentato il contrasto -->
+                    </div>
+                </div>
+
+                <!-- Category Card: Laptops -->
+                <div class="categoryCard">
+                    <div class="categoryImage">
+                        <a href="products.html">
+                            <img src="images/productCategories/laptops.jpg" alt="Laptops">
+                        </a>
+                    </div>
+                    <div class="categoryTitle perfectCenter">
+                        <h2 style="color: #000;">Laptops</h2> <!-- Aumentato il contrasto -->
+                    </div>
+                </div>
+
+                <!-- Category Card: Monitors -->
+                <div class="categoryCard">
+                    <div class="categoryImage">
+                        <a href="products.html">
+                            <img src="images/productCategories/computer.jpg" alt="Monitors">
+                        </a>
+                    </div>
+                    <div class="categoryTitle perfectCenter">
+                        <h2 style="color: #000;">Monitors</h2> <!-- Aumentato il contrasto -->
+                    </div>
+                </div>
+
+                <!-- Category Card: Printing & Scanning -->
+                <div class="categoryCard">
+                    <div class="categoryImage">
+                        <a href="products.html">
+                            <img src="images/productCategories/printingScanning.jpg" alt="Printing & Scanning">
+                        </a>
+                    </div>
+                    <div class="categoryTitle perfectCenter">
+                        <h2 style="color: #000;">Printing &amp; Scanning</h2> <!-- Aumentato il contrasto -->
+                    </div>
+                </div>
+
+                <!-- Category Card: Software -->
+                <div class="categoryCard">
+                    <div class="categoryImage">
+                        <a href="products.html">
+                            <img src="images/productCategories/software.jpg" alt="Software">
+                        </a>
+                    </div>
+                    <div class="categoryTitle perfectCenter">
+                        <h2 style="color: #000;">Software</h2> <!-- Aumentato il contrasto -->
+                    </div>
+                </div>
+
+                <!-- Category Card: Tablets -->
+                <div class="categoryCard">
+                    <div class="categoryImage">
+                        <a href="products.html">
+                            <img src="images/productCategories/tablets.png" alt="Tablets">
+                        </a>
+                    </div>
+                    <div class="categoryTitle perfectCenter">
+                        <h2 style="color: #000;">Tablets</h2> <!-- Aumentato il contrasto -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Purchases Section -->
+        <aside>
+            <h2 class="purchasesContainer">PURCHASES</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ITEM</th>
+                        <th>PRICE (AUD)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Test Item 1</td>
+                        <td>$1,000</td>
+                    </tr>
+                    <tr>
+                        <td>Test Item 2</td>
+                        <td>$500</td>
+                    </tr>
+                    <tr class="total">
+                        <th>TOTAL</th>
+                        <th>$1,500</th>
+                    </tr>
+                </tbody>
+            </table>
+            <input type="submit" name="checkout" value="Go to Checkout" style="color: #000; background-color: #fff;">
+        </aside>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>20xx © Edoardo Tancredi | All rights reserved</p>
+        <p>
+            <a href="#" style="color: #000;">Privacy Policy</a> <!-- Aumentato il contrasto -->
+        </p>
+    </footer>
+</div>
+
+</body>
+</html>

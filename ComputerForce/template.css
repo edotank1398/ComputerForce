@@ -1,0 +1,301 @@
+:root {
+  --cfBlack: #000;
+  --cfGrey: #888; /* For copyright text */
+  --cfGreen: #C7FFD8;
+  --cfLightBlue: #E4FBFF;
+  --cfLightGrey: #eeeeec; /* Correzione errore con lo zero alla fine */
+  --cfRed: #BD4B4B;
+  --cfPink: #EFB7B7;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif; /* Assicurati di usare Arial correttamente */
+}
+
+header {
+  display: flex;
+  justify-content: space-between; /* Logo a sinistra, menu a destra */
+  align-items: center;
+  background-color: var(--cfLightBlue);
+  padding: 1vh 1vw;
+  height: 10vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 10; /* Cambiato per allinearlo al layout */
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+}
+
+.right-section {
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+}
+
+.right-section ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+}
+
+.right-section ul li {
+  margin-left: 20px;
+}
+
+.right-section ul li a {
+  text-decoration: none;
+  color: var(--cfBlack); /* Usa il colore della variabile */
+}
+
+.search-container {
+  margin-left: 20px; /* Spazio tra la barra di ricerca e gli altri elementi */
+}
+
+header>div {
+  display: flex;
+  align-items: center;
+  height: 90%;
+  position: relative;
+}
+
+footer {
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: small;
+  width: 100vw;
+  padding: 12px;
+  text-align: center;
+  background-color: var(--cfGrey);
+}
+
+main {
+  display: flex;
+  top: 10vh; /* Adattato per dare spazio all'header */
+  width: 100vw;
+  min-height: 120vh;
+  position: relative;
+  background-color: var(--cfPink);
+}
+
+nav {
+  background-color: #F5F5F5;
+  border-bottom: 3px solid #66C2E0;
+  height: 5vh;
+  width: 100vw;
+  padding: 1vh 1vw;
+  display: none; /* Nav sarà visibile su schermi più grandi */
+  position: fixed;
+  top: 10vh;
+  z-index: 10;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+nav>ul>li {
+  display: inline;
+  margin-right: 5vw;
+}
+
+nav>ul>li>a {
+  color: #EB8D11;
+  text-decoration: none; /* Corretto da "solid" a "none" */
+  font-family: 'Lucida Sans', Geneva, sans-serif;
+}
+
+section {
+  background-color: var(--cfLightGrey);
+  width: 100%;
+  padding: 2vh 2vw 5vh;
+}
+
+div.desc>ul>li {
+  margin-left: 20px;
+  padding: 10px;
+}
+
+#logo {
+  height: 12vh;
+  width: auto;
+}
+
+.container {
+  min-height: 100vh;
+}
+
+.mobileButtonStyle,
+.mobileIconBag {
+  background-color: #F5F5F5;
+  border-bottom: 3px solid #000;
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  z-index: 1;
+  border-radius: 5px;
+}
+
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transition: 0.5s;
+  z-index: 3;
+}
+
+.perfectCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+table,
+h2 {
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1vh;
+}
+
+tr, th, td {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1vh;
+  text-align: center;
+}
+
+.purchasesContainer {
+  width: 100%;
+  text-align: center;
+  margin-top: 2vh;
+}
+
+.toggler {
+  position: absolute;
+  z-index: 2;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  opacity: 0;
+}
+
+.total {
+  font-weight: bold;
+}
+
+input[value="Go to Checkout"] {
+  color: var(--cfLightGrey);
+  background-color: var(--cfRed);
+  border-radius: 8px;
+  font-size: 20px;
+  width: 60%;
+  padding: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center; /* Centrato per l'header */
+}
+
+.search-container button {
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type="text"] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 20px;
+  border: none;
+}
+
+.mobileMenuContainer {
+  display: none;
+}
+
+@media (min-width: 600px) and (min-height: 441px) {
+  header {
+    justify-content: center;
+    background-color: #FFFFFF;
+    border-bottom: 3px solid #66C2E0;
+  }
+  
+  nav {
+    display: flex;
+    top: 10vh;
+  }
+}
+
+aside {
+  background-color: #f17d43;
+  padding-top: 10vh;
+  display: block;
+  width: 20vw;
+  height: auto;
+}
+
+main {
+  padding-top: 2%;
+  min-height: 100vh;
+  background-color: #ffffff;
+}
+
+section {
+  padding-left: 40px;
+  padding-right: 40px;
+  width: 80vw;
+}
+
+footer {
+  position: relative;
+  opacity: 0.95;
+  font-size: medium;
+  background-color: var(--cfGrey);
+}
+
+aside>input[value="Go to Checkout"] {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+}
+
+div.searchDesktopContainer {
+  margin-left: auto;
+  margin-bottom: 7px;
+}
+
+.searchDesktopContainer button {
+  padding: 6px 10px;
+  margin-top: 8px;
+  background-color: var(--cfLightGrey);
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=text] {
+  font-size: 17px;
+}
